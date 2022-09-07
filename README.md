@@ -19,9 +19,9 @@ privateKey.json                          首次运行时填写私钥和密码
 
 ## 首次运行流程  
 ### windows教程  
-1.在[release](https://github.com/luoyeETH/autoFreeMint_pkg/releases)中下载最新版本的exe程序
-2.双击启动跟单程序，第一次运行时会闪退，然后会多出keystore和privateKey.json两个文件
-3.在privateKey.json中填写私钥和密码  
+1.在[release](https://github.com/luoyeETH/autoFreeMint_pkg/releases)中下载最新版本的exe程序  
+2.双击启动跟单程序，第一次运行时会闪退，然后会多出keystore和privateKey.json两个文件  
+3.在privateKey.json中填写私钥和密码   
 ```
 {
     "privateKeyList": [
@@ -45,6 +45,13 @@ cd autofreemint
 wget -N --no-check-certificate https://raw.githubusercontent.com/luoyeETH/autoFreeMint_pkg/main/install.sh && chmod 775 install.sh && bash install.sh
 5.配置privateKey.json
 vim privateKey.json (或使用xftp等工具打开编辑，填入私钥和密码)
+{
+    "privateKeyList": [
+        "私钥1",
+        "私钥2"
+    ],
+    "password": "密码"
+}
 6.运行程序
 ./autofreemint-linux 按要求完成配置
 (7.)保持后台运行 
@@ -75,16 +82,16 @@ nohup ./autofreemint-linux &
  `autoGas` 自动gas模式  
  ----`enable` [true/false] autoGas开关，打开时为自动gas模式，关闭时为预设gas模式。默认关闭  
  ----`gasMode` [fast/normal] 自动gas速度选择，fast速度更快，消耗gas更多，normal消耗gas略低，但可能会失败。默认fast  
- `maxGas_USD` 以美元计价的最大gas限制
+ `maxGas_USD` 以美元计价的最大gas限制  
  ----`enable` [true/false] maxGas_USD开关，打开后会预估gas消耗。默认关闭  
  ----`value` 直接填写数字，不需要双引号。默认0   
  `useAccount` 开启跟单的账户，填0全部开启。默认0  
  ----`enable` [true/false] useAccount开关。默认关闭  
  ----`value` 直接填写数字，不需要双引号。默认0   
  `multiAccountConfig` 动态多账户模式  
- `enable` [true/false] 动态多账户开关。默认关闭
- `gasGearsList` gas档位配置[档位1, 档位2, 档位3]  
- `useAccountGearsList` 使用账号档位配置[账号数1，账号数2，账号数3]  
+ ----`enable` [true/false] 动态多账户开关。默认关闭  
+ ----`gasGearsList` gas档位配置[档位1, 档位2, 档位3]  
+ ----`useAccountGearsList` 使用账号档位配置[账号数1，账号数2，账号数3]  
  > 举例   
  ```
  以下配置效果为：在gas0-10时使用5个账号跟单，10-20时使用3个账号跟单，20-50时使用一个账号跟单  
