@@ -1,11 +1,13 @@
 # autoFreeMint_pkg
 # 快速开始    
-下载地址=====>>> [release](https://github.com/luoyeETH/autoFreeMint_pkg/releases)  
+**[windows教程](#windows教程)  [linux教程](#linux教程)**  
+
+下载地址[release](https://github.com/luoyeETH/autoFreeMint_pkg/releases)  
 ![download](download.png)  
 
-简单演示视频===>>> [查看](https://www.bilibili.com/video/BV1Pe4y1o7Lg/)  
+简单演示视频[查看](https://www.bilibili.com/video/BV1Pe4y1o7Lg/)  
 
-有问题可以提issue===>>> [issue](https://github.com/luoyeETH/autoFreeMint_pkg/issues) 
+有问题可以提issue[提issue](https://github.com/luoyeETH/autoFreeMint_pkg/issues) 
 
 # 使用说明  
 ## 文件目录说明
@@ -16,8 +18,10 @@ config.json                              配置文件
 privateKey.json                          首次运行时填写私钥和密码   
 
 ## 首次运行流程  
-1.启动跟单程序 如果缺少配置文件会自动生成  
-2.在privateKey.json中填写私钥和密码  
+### windows教程  
+1.在[release](https://github.com/luoyeETH/autoFreeMint_pkg/releases)中下载最新版本的exe程序
+2.双击启动跟单程序，第一次运行时会闪退，然后会多出keystore和privateKey.json两个文件
+3.在privateKey.json中填写私钥和密码  
 ```
 {
     "privateKeyList": [
@@ -28,19 +32,23 @@ privateKey.json                          首次运行时填写私钥和密码
 }
 ```  
 
-3.重新启动跟单程序 按提示配置相关设置  
-(可选)4.输入密码 启动程序  
+3.重新启动跟单程序，按提示配置相关设置即可  
 
->linux简易教程 
+### linux教程 
 ```
+1.使用xshell等工具连接服务器
+2.新建目录
 mkdir autofreemint
+3.切换到该目录
 cd autofreemint
-wget https://github.com/luoyeETH/autoFreeMint_pkg/releases/download/v0.1.7-alpha/autofreemint-linux
-chmod +x autofreemint-linux
-./autofreemint-linux 首次运行生成keystore文件夹和privateKey.json
-vim privateKey.json (或使用xftp等工具打开编辑)
+4.一键获取最新版跟单脚本并生成初始化文件
+wget -N --no-check-certificate https://raw.githubusercontent.com/luoyeETH/autoFreeMint_pkg/main/install.sh && chmod 775 install.sh && bash install.sh
+5.配置privateKey.json
+vim privateKey.json (或使用xftp等工具打开编辑，填入私钥和密码)
+6.运行程序
 ./autofreemint-linux 按要求完成配置
-保持后台运行 nohup ./autofreemint-linux & 
+(7.)保持后台运行 
+nohup ./autofreemint-linux & 
 ```
 
 ## 配置项说明  
