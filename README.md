@@ -112,7 +112,6 @@ vim privateKey.json (或使用xftp等工具打开编辑)
 		"testnet": "goerli"
 	}
 }
-}
 ```
 
 `required` 必填项  
