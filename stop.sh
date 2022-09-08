@@ -1,5 +1,2 @@
 #! /bin/sh
-PRO_NAME=autofreemint-linux
-killall -9 $PRO_NAME
-echo "autoFreeMint stop"
-exit 0
+kill -9 `lsof autofreemint-linux |grep auto |awk '{print $2}'`
