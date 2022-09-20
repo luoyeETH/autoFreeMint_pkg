@@ -107,8 +107,15 @@ nohup ./autofreemint-linux &
 `discordKey` discord-webhook-key 填写`https://discordapp.com/api/webhooks/${discordKey}`discordKey部分  
 `pushFlag_bark` [true/false] 推送bark开关。默认关闭  
 `barkKey` IOS推送软件bark的key 填写`https://api.day.app/${barkKey}/`barkKey部分  
-`contractBlacklist` 合约地址黑名单。默认包含opensea,x2y2,looksrare,ens,gem等合约地址，在pending跟单模式中，当接受方在黑名单地址中，交易不会发送。  
+`contractBlacklist` 合约地址黑名单。默认包含opensea,x2y2,looksrare,ens,gem等合约地址，在pending跟单模式中，当接受方在黑名单地址中，交易不会发送  
 `methodBlacklist` 方法黑名单。默认包含setApproveForAll,Approve,tansferFrom等方法，在pending跟单模式中，当跟单地址进行这些操作时，交易不会发送  
+`pause` 指定时间区间内暂停跟单  
+----`enable` [true/false] 暂停mint开关。默认关闭  
+----`pauseTime` 暂停开始时间[HH:ss]   
+----`resumeTime` 暂停结束时间[HH:ss]  
+`followAddressNum` 多地址mint后跟单，follow列表中对同一个项目mint次数大于等于指定次数后再跟单  
+----`enable` [true/false] 多地址mint后跟单。默认关闭  
+----`value` 直接填写数字，不需要双引号。默认1 
 
 `test` **测试选项**  
 `enable` [true/false] 测试模式开关。默认关闭  
@@ -153,6 +160,15 @@ nohup ./autofreemint-linux &
 			"pushFlag_bark": false,
 			"barkKey": ""
 		},
+		"pause": {
+			"enable": false,
+			"pauseTime": "00:00",
+			"resumeTime": "00:00"
+		},
+		"followAddressNum": {
+			"enable": false,
+			"value": 1
+		},
 		"contractBlacklist": [
 			"0x00000000006c3852cbef3e08e8df289169ede581",
 			"0x74312363e45dcaba76c59ec49a7aa8a65a67eed3",
@@ -179,6 +195,10 @@ nohup ./autofreemint-linux &
 ```
 
 # 更新日志  
+**测试版 v0.1.11-alpha** 
+* 新增满足多个地址同时mint的条件后再跟单  
+* 添加了跟单时候的日期打印  
+* 延长测试版使用时间到2022-09-28 00:00  
 
 **测试版 v0.1.10-alpha** 
 * 钱包加载时过滤余额低于0.001的钱包  
