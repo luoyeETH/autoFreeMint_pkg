@@ -5,6 +5,8 @@
 下载地址[release](https://github.com/luoyeETH/autoFreeMint_pkg/releases)  
 ![download](download.png)  
 
+[免费试用版(截止2022-10-23 20:00)](https://github.com/luoyeETH/autoFreeMint_pkg/releases/tag/v0.2.0-beta)  
+
 简单演示视频[查看](https://www.bilibili.com/video/BV1Pe4y1o7Lg/)  
 
 有问题可以提issue[提issue](https://github.com/luoyeETH/autoFreeMint_pkg/issues) 
