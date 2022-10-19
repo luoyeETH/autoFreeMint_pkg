@@ -24,6 +24,7 @@ privateKey.json                          首次运行时填写私钥和密码
 1.在[release](https://github.com/luoyeETH/autoFreeMint_pkg/releases)中下载最新版本的exe程序  
 2.双击启动跟单程序，第一次运行时会闪退，然后会多出keystore和privateKey.json两个文件  
 3.在privateKey.json中填写私钥和密码   
+本地使用文本编辑器或vscode等软件编辑,或[在线编辑json](https://www.jsont.run/)  
 ```
 {
     "privateKeyList": [
