@@ -1,4 +1,7 @@
 # autoFreeMint_pkg
+**关联项目**  
+在线多钱包mint、挂单、合约批发 https://nft-batch-mint.vercel.app/  
+Blur bid监控提醒、自动撤销bid、自动bid https://github.com/luoyeETH/blur_bid_alert
 # 快速开始    
 **[windows教程](#windows教程)  [linux教程](#linux教程)**  
 
