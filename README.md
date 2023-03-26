@@ -206,6 +206,9 @@ nohup ./autofreemint-linux &
 # 更新日志  
 
 ### beta测试  
+**测试版 v0.2.6-beta** 
+* 新增`higherGas`参数，设置为true时，在跟单过程中别人的gas高于预设时，gas费会替换为跟单gas+1  
+
 **测试版 v0.2.5-beta** 
 * 针对Manifold平台(0x44e94034afce2dd3cd5eb62528f239686fc8f162)进行了优化  
 
