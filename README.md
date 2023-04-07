@@ -206,6 +206,9 @@ nohup ./autofreemint-linux &
 # 更新日志  
 
 ### beta测试  
+**测试版 v0.2.8-beta** 
+* 验证Pass卡持仓地址数量超过5后将不再验证余下地址持仓  
+
 **测试版 v0.2.7-beta** 
 * 修复了higherGas模式下的一个严重bug  
 
