@@ -129,83 +129,98 @@ nohup ./autofreemint-linux &
 `test` **测试选项**  
 `enable` [true/false] 测试模式开关。默认关闭  
 `testnet` 填写测试网。默认goerli  
-
+  
+**注意: 部分新增参数没有更新到文档中，请参照更新日志或[加入discord](https://discord.gg/KMn2feFHca)询问**   
 ```
 {
-	"required": {
-		"alchemyKey": "",
-		"followAddress": [
-			""
-		]
-	},
-	"optional": {
-		"password": "",
-		"runMode": "pending",
-		"mintToMode": "self",
-		"maxPriority": 2,
-		"maxGasPrice": 50,
-		"maxValue": 0,
-		"autoGas": {
-			"enable": false,
-			"gasMode": "fast"
-		},
-		"maxGas_USD": {
-			"enable": false,
-			"value": 0
-		},
-		"useAccount": {
-			"enable": false,
-			"value": 0
-		},
-		"multiAccountConfig": {
-			"enable": false,
-			"gasGearsList": [],
-			"useAccountGearsList": []
-		},
-		"messagePushConfig": {
-			"enable": false,
-			"pushFlag_dc": false,
-			"discordKey": "",
-			"pushFlag_bark": false,
-			"barkKey": ""
-		},
-		"pause": {
-			"enable": false,
-			"pauseTime": "00:00",
-			"resumeTime": "00:00"
-		},
-		"followAddressNum": {
-			"enable": false,
-			"value": 1
-		},
-		"contractBlacklist": [
-			"0x00000000006c3852cbef3e08e8df289169ede581",
-			"0x74312363e45dcaba76c59ec49a7aa8a65a67eed3",
-			"0x59728544b08ab483533076417fbbb2fd0b17ce3a",
-			"0x084b1c3c81545d370f3634392de611caabff8148",
-			"0x83c8f28c26bf6aaca652df1dbbe0e1b56f8baba2",
-			"0x0a267cf51ef038fc00e71801f5a524aec06e4f07",
-			"0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6",
-			"0x283Af0B28c62C092C9727F1Ee09c02CA627EB7F5"
-		],
-		"methodBlacklist": [
-			"0x",
-			"0xa22cb465",
-			"0x42842e0e",
-			"0x23b872dd",
-			"0x095ea7b3"
-		]
-	},
-	"test": {
-		"enable": false,
-		"testnet": "goerli"
-	}
-}
+        "required": {
+            "alchemyKey": "",
+            "followAddress": ["",""]
+        },
+    
+        "optional": {
+            "password": "",
+            "runMode": "pending",  
+            "mintToMode": "self",      
+            "maxPriority": 2,
+            "maxGasPrice": 50,
+            "maxValue": 0,
+		    "higherGas": false,
+            "autoGas":{
+                "enable": false,
+                "gasMode": "fast"
+            },
+            "maxGas_USD": {
+                "enable": false,
+                "value": 0
+            },       
+            "useAccount": {
+                "enable": false,
+                "value": 0
+            },
+            "multiAccountConfig":{
+                "enable": false,
+                "gasGearsList": [],
+                "useAccountGearsList": []
+            },
+            "messagePushConfig":{
+                "enable": false,
+                "pushFlag_dc": false,  
+                "discordKey": "",
+                "pushFlag_bark": false,              
+                "barkKey": ""
+            },
+            "pause": {
+                "enable": false,
+                "pauseTime": "00:00",
+                "resumeTime": "00:00"
+            },
+            "followAddressNum": {
+                "enable": false,
+                "value": 1
+            },
+            "rugAddressList": [],
+            "contractBlacklist": [
+                "0x00000000006c3852cbef3e08e8df289169ede581",
+                "0x74312363e45dcaba76c59ec49a7aa8a65a67eed3",
+                "0x00000000000111AbE46ff893f3B2fdF1F759a8A8",
+                "0x39da41747a83aeE658334415666f3EF92DD0D541",
+                "0x000000000000ad05ccc4f10045630fb830b95127",
+                "0x59728544b08ab483533076417fbbb2fd0b17ce3a",
+                "0x084b1c3c81545d370f3634392de611caabff8148",
+                "0x83c8f28c26bf6aaca652df1dbbe0e1b56f8baba2",
+                "0x0a267cf51ef038fc00e71801f5a524aec06e4f07",
+                "0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6",
+                "0x283Af0B28c62C092C9727F1Ee09c02CA627EB7F5",
+                "0xd152f549545093347a162dce210e7293f1452150", 
+                "0x1a90b3dead0113740266b7f7ea1136e8ed1b48c5", 
+                "0xfCC926dfef1548A8e74C36D1b0d3c05f13B60918",
+                "0x005Da41474EB93cfEa6FcC126e7bEAf467e96666" 
+            ],
+            "methodBlacklist": [
+                "0x",
+                "0xa22cb465",
+                "0x42842e0e",
+                "0x23b872dd",
+                "0xf242432a"
+            ]
+        },
+        
+        "test":{
+            "enable": false,
+            "testnet": "goerli"
+        }
+    
+    }
 ```
 
 # 更新日志  
 
 ### beta测试  
+**测试版 v0.2.9-beta** 
+* 新增`rugAddressList`参数，填入地址后，将不会再mint该地址交互过的合约      
+* 扩充了黑名单列表  
+
 **测试版 v0.2.8-beta** 
 * 验证Pass卡持仓地址数量超过5后将不再验证余下地址持仓  
 
