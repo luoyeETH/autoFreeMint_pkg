@@ -195,7 +195,8 @@ nohup ./autofreemint-linux &
                 "0xd152f549545093347a162dce210e7293f1452150", 
                 "0x1a90b3dead0113740266b7f7ea1136e8ed1b48c5", 
                 "0xfCC926dfef1548A8e74C36D1b0d3c05f13B60918",
-                "0x005Da41474EB93cfEa6FcC126e7bEAf467e96666" 
+                "0x005Da41474EB93cfEa6FcC126e7bEAf467e96666",
+		"0xef1c6e67703c7bd7107eed8303fbe6ec2554bf6b" 
             ],
             "methodBlacklist": [
                 "0x",
@@ -217,6 +218,10 @@ nohup ./autofreemint-linux &
 # 更新日志  
 
 ### beta测试  
+**测试版 v0.2.10-beta**  
+* 添加了mint时的时间打印  
+* 扩充了黑名单列表  
+
 **测试版 v0.2.9-beta** 
 * 新增`rugAddressList`参数，填入地址后，将不会再mint该地址交互过的合约      
 * 扩充了黑名单列表  
