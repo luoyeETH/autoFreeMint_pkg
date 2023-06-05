@@ -203,7 +203,8 @@ nohup ./autofreemint-linux &
                 "0xa22cb465",
                 "0x42842e0e",
                 "0x23b872dd",
-                "0xf242432a"
+                "0xf242432a",
+		"0x095ea7b3"
             ]
         },
         
