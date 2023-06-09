@@ -1,6 +1,6 @@
 # autoFreeMint_pkg
 **关联项目**  
-在线多钱包mint、挂单、合约批发 https://nft-batch-mint.vercel.app/  
+在线多钱包mint、挂单、合约批发 https://dddd8.xyz  
 Blur bid监控提醒、自动撤销bid、自动bid https://github.com/luoyeETH/blur_bid_alert
 # 快速开始    
 **[windows教程](#windows教程)  [linux教程](#linux教程)**  
@@ -12,6 +12,8 @@ Blur bid监控提醒、自动撤销bid、自动bid https://github.com/luoyeETH/b
 
 mint链接: https://etherscan.io/address/0xf3b866a14b7e80b7a7968413117ca8926b85602e#writeContract#F2  
 mint价格: 0.02eth  
+>一张pass卡对应一个钱包  五张pass卡加入的钱包后不再验证pass卡  
+>持有pass卡的钱包可以使用 https://dddd8.xyz  
 
 简单演示视频[查看](https://www.bilibili.com/video/BV1Pe4y1o7Lg/)  
 
