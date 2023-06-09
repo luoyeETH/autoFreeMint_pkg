@@ -12,7 +12,7 @@ Blur bid监控提醒、自动撤销bid、自动bid https://github.com/luoyeETH/b
 
 mint链接: https://etherscan.io/address/0xf3b866a14b7e80b7a7968413117ca8926b85602e#writeContract#F2  
 mint价格: 0.02eth  
->一张pass卡对应一个钱包  五张pass卡加入的钱包后不再验证pass卡  
+>一张pass卡对应一个跟单钱包  五张pass卡后加入的跟单钱包后不再验证pass卡  
 >持有pass卡的钱包可以使用 https://dddd8.xyz  
 
 简单演示视频[查看](https://www.bilibili.com/video/BV1Pe4y1o7Lg/)  
