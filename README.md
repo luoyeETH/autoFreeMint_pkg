@@ -221,6 +221,15 @@ nohup ./autofreemint-linux &
 # 更新日志  
 
 ### beta测试  
+
+**测试版 v0.2.12-beta**  
+* bugfix  
+
+**测试版 v0.2.11-beta**  
+* 可以添加更多的apikey  
+* 扩充了黑名单列表  
+* 优化了部分日志显示  
+  
 **测试版 v0.2.10-beta**  
 * 添加了mint时的时间打印  
 * 扩充了黑名单列表  
